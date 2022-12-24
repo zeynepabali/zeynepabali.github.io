@@ -1,0 +1,19 @@
+.navbar .navbar-nav .nav-link:hover {
+background-color: #fff;
+color: #009EFF;
+    }
+.navbar .navbar-nav .nav-link {
+padding: 0.6em;
+font-size: 1.2em;
+color: #fff;
+transition: all 0.5s;
+}
+
+@media only screen and (min-width: 992px) {
+.navbar {
+  padding: 0;
+}
+.navbar .navbar-nav .nav-link {
+  padding: 1em 0.7em;
+}
+}
