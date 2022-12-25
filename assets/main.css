@@ -1,13 +1,22 @@
 .navbar .navbar-nav .nav-link:hover {
-background-color: #fff;
-color: #009EFF;
+    border-bottom-color: #009EFF;
+    color: #009EFF;
+    font-weight: bold;
     }
+
 .navbar .navbar-nav .nav-link {
-padding: 0.6em;
-font-size: 1.2em;
-color: #fff;
-transition: all 0.5s;
+
+    transition: all 0.5s;
+    font-weight: bold;
 }
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: #009EFF;
+    text-decoration: none; }
 
 @media only screen and (min-width: 992px) {
 .navbar {

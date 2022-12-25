@@ -5,32 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Zeynep Abalı</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/main.css">
+    <script src="https://kit.fontawesome.com/c8af9ab350.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   </head>
   <body>
-      <nav class="navbar navbar-expand-lg navbar-dark justify-content-center" style="background-color: #009EFF;">
-          <ul class="navbar-nav nav-justified col-12 col-md-auto mb-md-0">
+    <div class="d-flex container">
+      <nav class="navbar navbar-collapse navbar-expand-lg border-bottom">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+          <ul class="navbar-nav collapse navbar-collapse nav-justified" id="nav">
             <li class="nav-item">
-                <a class="nav-link" href="index.html">CV</a>
+                <button type="button" class="btn nav-link">CV</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="projects.html">Projects</a>
+                <button type="button" class="btn nav-link">Projects</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="publications.html">Publications</a>
+                <button type="button" class="btn nav-link">Publications</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="courses.html">Courses</a>
+                <button type="button" class="btn nav-link">Courses</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="teaching.html">Teaching</a>
+                <button type="button" class="btn nav-link">Teaching</button>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="external.html">External</a>
+                <button type="button" class="btn nav-link">External</button>
             </li>
         </ul>
+      </nav>
+    </div>
 
-      <nav>
+      <div class="container mt-5 d-none d-xl-block">
+          <div class="row">
+              <div class="col-2 justify-content-center position-sticky" id="sidebar">
+                  <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle mb-4">
+                  <h4 class="text-center">Zeynep Abalı</h4>
+                  <p class="text-center">M.Sc. Data Science<br>Koç University</p>
+
+                  <div class="mt-4 m-2"><i class="fa-solid fa-location-dot fa-fw"></i>&nbspIstanbul/Turkey</div>
+                  <div class="m-2"><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></div>
+                  <div class="m-2"><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></div>
+                  <div class="m-2"><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></div>
+              </div>
+          </div>
+      </div>
+
+
+    <div class="container mt-4 d-xl-none">
+          <div class="d-flex flex-row position-sticky justify-content-center">
+              <div class="d-flex flex-col align-items-center" id="infobar">
+                  <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle" style="height: 4em;">
+                  <h5>&nbspZeynep Abalı&nbsp</h5>
+
+                  <div class="dropdown">
+                      <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block" data-bs-toggle="dropdown" aria-expanded="false">
+                        Contact
+                      </button>
+
+                      <ul class="dropdown-menu text-center">
+                        <li><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></li>
+                        <li><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></li>
+                        <li><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-12 mt-4">
+                  content
+              </div>
+          </div>
+    </div>
+
+
+    <script>
+        $(document).ready(function() {
+            $.fn.getContent = function() {
+                document.getElementById("content").innerHTML
+                    = "JQuery function is defined!";
+            }
+        });
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
 </html>
