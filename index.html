@@ -97,64 +97,47 @@
       </nav>
     </div>
 
-    <div class="container mt-5 d-none d-xl-block">
-      <div class="row">
-          <div class="d-flex flex-column col-2 justify-content-center position-sticky" id="sidebar">
-              <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle align-self-center" style="height: 10em; width: 10em;">
-              <h4 class="text-center pt-2">Zeynep Abalı</h4>
-              <p class="text-center">M.Sc. Data Science<br>Koç University</p>
+    <div class="container d-flex flex-wrap flex-row mt-4">
+        <div class="justify-content-center position-sticky d-none d-xl-block p-4" id="sidebar">
+          <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle align-self-center" style="height: 10em; width: 10em;">
+          <h4 class="text-center pt-2">Zeynep Abalı</h4>
+          <p class="text-center">M.Sc. Data Science<br>Koç University</p>
 
-              <div class="m-2"><i class="fa-solid fa-location-dot fa-fw"></i>&nbspIstanbul/Turkey</div>
-              <div class="m-2"><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></div>
-              <div class="m-2"><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></div>
-              <div class="m-2"><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></div>
+          <div class="m-2"><i class="fa-solid fa-location-dot fa-fw"></i>&nbspIstanbul/Turkey</div>
+          <div class="m-2"><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></div>
+          <div class="m-2"><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></div>
+          <div class="m-2"><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></div>
+        </div>
+
+        <div class="d-xl-none d-flex flex-nowrap position-sticky justify-content-center align-items-center" id="infobar">
+          <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle" style="height: 4em;">
+          <h5 class="p-2">&nbspZeynep Abalı&nbsp</h5>
+
+          <div class="dropdown">
+              <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block mb-1" data-bs-toggle="dropdown" aria-expanded="false">
+                Contact
+              </button>
+
+              <ul class="dropdown-menu p-2">
+                <li><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></li>
+                <li><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></li>
+                <li><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></li>
+              </ul>
           </div>
-            <div class="m-4 cv">
-            </div>
-            <div class="m-4 projects">
-            </div>
-            <div class="m-4 publications">
-            </div>
-            <div class="m-4 courses">
-            </div>
-            <div class="m-4 teaching">
-            </div>
-            <div class="m-4 external">
-            </div>
-      </div>
-    </div>
+        </div>
 
-    <div class="container mt-4 d-xl-none">
-      <div class="d-flex flex-row position-sticky justify-content-center">
-          <div class="d-flex flex-col align-items-center" id="infobar">
-              <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle" style="height: 4em;">
-              <h5 class="p-2">&nbspZeynep Abalı&nbsp</h5>
-
-              <div class="dropdown">
-                  <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block mb-1" data-bs-toggle="dropdown" aria-expanded="false">
-                    Contact
-                  </button>
-
-                  <ul class="dropdown-menu p-2">
-                    <li><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></li>
-                    <li><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></li>
-                    <li><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></li>
-                  </ul>
-              </div>
-          </div>
-      </div>
-        <div class="col-12 currentContent">
-            <div class="m-4 cv">
+        <div class="p-4" style="width: 908px;">
+            <div id="cv">
             </div>
-            <div class="m-4 projects">
+            <div id="projects">
             </div>
-            <div class="m-4 publications">
+            <div id="publications">
             </div>
-            <div class="m-4 courses">
+            <div id="courses">
             </div>
-            <div class="m-4 teaching">
+            <div id="teaching">
             </div>
-            <div class="m-4 external">
+            <div id="external">
             </div>
         </div>
     </div>
