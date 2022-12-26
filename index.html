@@ -147,7 +147,7 @@
             fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/cv.html')
             .then((response) => response.text())
             .then((text) => {
-            $(".cv").html(text);
+            $("#cv").html(text);
             })
         });
 
@@ -155,7 +155,7 @@
             fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/' + filePath + '.html')
             .then((response) => response.text())
             .then((text) => {
-            $("." + filePath).html(text);
+            $("#" + filePath).html(text);
             })
         };
 
