@@ -71,19 +71,19 @@
                 <button type="button" class="btn nav-link" onclick="myFunction('cv.html')">CV</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link">Projects</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('projects.html')">Projects</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link">Publications</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('publications.html')">Publications</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link">Courses</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('courses.html')">Courses</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link">Teaching</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('teaching.html')">Teaching</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link">External</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('external.html')">External</button>
             </li>
         </ul>
       </nav>
@@ -133,6 +133,13 @@
 
 
     <script>
+        $( document ).ready(function() {
+            fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/cv.html')
+            .then((response) => response.text())
+            .then((text) => {
+            $(".currentContent").html(text);
+            })
+        });
 
         function myFunction(filePath) {
             fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/' + filePath)
