@@ -10,19 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
       <style>
-          .navbar .navbar-nav .nav-link:hover {
-                border-bottom-color: #009EFF;
-                color: #009EFF;
-                font-weight: bold;
-                }
-
-            .navbar .navbar-nav .nav-link {
-
-                transition: all 0.5s;
-                font-weight: bold;
-            }
-
-            a {
+             a {
                 color: black;
                 text-decoration: none;
             }
@@ -30,21 +18,52 @@
                 color: #009EFF;
                 text-decoration: none; }
 
-            @media only screen and (min-width: 992px) {
+            .navbar .navbar-nav .nav-link {
+                font-weight: bold;
+            }
+            .navbar .navbar-nav .nav-link:hover {
+              color: #009EFF;
+            }
+            .navbar .navbar-nav .nav-item {
+              position: relative;
+            }
+            .navbar .navbar-nav .nav-item::after {
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              margin: auto;
+              background-color: #009EFF;
+              width: 0%;
+              content: "";
+              height: 4px;
+              transition: all 0.5s;
+            }
+
+            .navbar .navbar-nav .nav-item:hover::after {
+              width: 100%;
+            }
+
+
+        @media only screen and (min-width: 1200px) {
             .navbar {
-              padding: 0;
+            padding: 0;
             }
             .navbar .navbar-nav .nav-link {
-              padding: 1em 0.7em;
+            padding: 1em 0;
+            }
+            .navbar .navbar-nav .nav-item {
+            margin: 0 1em;
             }
         }
       </style>
   </head>
+
   <body>
     <div class="d-flex container">
-      <nav class="navbar navbar-collapse navbar-expand-lg border-bottom">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
+      <nav class="navbar navbar-collapse navbar-expand-xl border-bottom">
+        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon p-2"></span>
         </button>
           <ul class="navbar-nav collapse navbar-collapse nav-justified" id="nav">
             <li class="nav-item">
@@ -71,12 +90,12 @@
 
     <div class="container mt-5 d-none d-xl-block">
       <div class="row">
-          <div class="col-2 justify-content-center position-sticky" id="sidebar">
-              <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle mb-4">
-              <h4 class="text-center">Zeynep Abalı</h4>
+          <div class="d-flex flex-column col-2 justify-content-center position-sticky" id="sidebar">
+              <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle align-self-center" style="height: 10em; width: 10em;">
+              <h4 class="text-center pt-2">Zeynep Abalı</h4>
               <p class="text-center">M.Sc. Data Science<br>Koç University</p>
 
-              <div class="mt-4 m-2"><i class="fa-solid fa-location-dot fa-fw"></i>&nbspIstanbul/Turkey</div>
+              <div class="m-2"><i class="fa-solid fa-location-dot fa-fw"></i>&nbspIstanbul/Turkey</div>
               <div class="m-2"><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></div>
               <div class="m-2"><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></div>
               <div class="m-2"><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></div>
@@ -91,14 +110,14 @@
       <div class="d-flex flex-row position-sticky justify-content-center">
           <div class="d-flex flex-col align-items-center" id="infobar">
               <img src="assets/zeynepabali_photo.png" class="img-thumbnail rounded-circle" style="height: 4em;">
-              <h5>&nbspZeynep Abalı&nbsp</h5>
+              <h5 class="p-2">&nbspZeynep Abalı&nbsp</h5>
 
               <div class="dropdown">
-                  <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block" data-bs-toggle="dropdown" aria-expanded="false">
+                  <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block mb-1" data-bs-toggle="dropdown" aria-expanded="false">
                     Contact
                   </button>
 
-                  <ul class="dropdown-menu text-center">
+                  <ul class="dropdown-menu p-2">
                     <li><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></li>
                     <li><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></li>
                     <li><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></li>
