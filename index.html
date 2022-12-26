@@ -169,7 +169,7 @@
         });
 
         function myFunction(filePath) {
-            fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/' + filePath + '/html')
+            fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/' + filePath + '.html')
             .then((response) => response.text())
             .then((text) => {
             $("." + filePath).html(text);
