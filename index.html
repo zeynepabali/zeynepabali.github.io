@@ -76,22 +76,22 @@
         </button>
           <ul class="navbar-nav collapse navbar-collapse nav-justified" id="nav">
             <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="myFunction('cv.html')">CV</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('cv')">CV</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="myFunction('projects.html')">Projects</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('projects')">Projects</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="myFunction('publications.html')">Publications</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('publications')">Publications</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="myFunction('courses.html')">Courses</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('courses')">Courses</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="myFunction('teaching.html')">Teaching</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('teaching')">Teaching</button>
             </li>
             <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="myFunction('external.html')">External</button>
+                <button type="button" class="btn nav-link" onclick="myFunction('external')">External</button>
             </li>
         </ul>
       </nav>
@@ -109,9 +109,18 @@
               <div class="m-2"><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></div>
               <div class="m-2"><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></div>
           </div>
-          <div class="col-10 currentContent">
-
-          </div>
+            <div class="m-4 cv">
+            </div>
+            <div class="m-4 projects">
+            </div>
+            <div class="m-4 publications">
+            </div>
+            <div class="m-4 courses">
+            </div>
+            <div class="m-4 teaching">
+            </div>
+            <div class="m-4 external">
+            </div>
       </div>
     </div>
 
@@ -135,7 +144,18 @@
           </div>
       </div>
         <div class="col-12 currentContent">
-
+            <div class="m-4 cv">
+            </div>
+            <div class="m-4 projects">
+            </div>
+            <div class="m-4 publications">
+            </div>
+            <div class="m-4 courses">
+            </div>
+            <div class="m-4 teaching">
+            </div>
+            <div class="m-4 external">
+            </div>
         </div>
     </div>
 
@@ -144,17 +164,18 @@
             fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/cv.html')
             .then((response) => response.text())
             .then((text) => {
-            $(".currentContent").html(text);
+            $(".cv").html(text);
             })
         });
 
         function myFunction(filePath) {
-            fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/' + filePath)
+            fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/' + filePath + '/html')
             .then((response) => response.text())
             .then((text) => {
-            $(".currentContent").html(text);
+            $("." + filePath).html(text);
             })
         };
+
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
   </body>
