@@ -1,172 +1,512 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
 
-    <title>Zeynep ABALI</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/c8af9ab350.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Zeynep Abalı — Data & ML Engineer · AI Instructor</title>
+    <meta name="description"
+        content="Zeynep Abalı is a Data & ML Engineer and AI course instructor with expertise in building production data pipelines, Kubernetes infrastructure, and enterprise AI systems. Co-founder of DataBeta Academy.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Zeynep Abalı — Data & ML Engineer · AI Instructor">
+    <meta property="og:description"
+        content="Freelance Data & ML Engineer building production-grade data pipelines and Kubernetes infrastructure. Instructor at DataBeta Academy.">
+    <meta property="og:url" content="https://zeynepabali.github.io">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Zeynep Abalı — Data & ML Engineer · AI Instructor">
 
-      <style>
-             a {
-                color: black;
-                text-decoration: none;
-                font-weight: bold;
-                transition: all 0.5s;
-            }
-            a:hover {
-                color: #009EFF;
-                text-decoration: none; }
-            h3 {
-                color: #009EFF;
-            }
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            .navbar .navbar-nav .nav-link {
-                font-weight: bold;
-            }
-            .navbar .navbar-nav .nav-link:hover {
-              color: #009EFF;
-            }
-            .navbar .navbar-nav .nav-item {
-              position: relative;
-            }
-            .navbar .navbar-nav .nav-item::after {
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              right: 0;
-              margin: auto;
-              background-color: #009EFF;
-              width: 0%;
-              content: "";
-              height: 4px;
-              transition: all 0.5s;
-            }
+<body>
 
-            .navbar .navbar-nav .nav-item:hover::after {
-              width: 100%;
-            }
-
-            .pub-journal {
-                font-style: italic;
-            }
-
-
-        @media only screen and (min-width: 1200px) {
-            .navbar {
-            padding: 0;
-            }
-            .navbar .navbar-nav .nav-link {
-            padding: 1em 0;
-            }
-            .navbar .navbar-nav .nav-item {
-            margin: 0 1em;
-            }
-        }
-      </style>
-  </head>
-
-  <body>
-    <div class="d-flex container">
-      <nav class="navbar navbar-collapse navbar-expand-xl border-bottom">
-        <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon p-2"></span>
-        </button>
-          <ul class="navbar-nav collapse navbar-collapse nav-justified" id="nav">
-            <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="getContent('cv')">CV</button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="getContent('projects')">Projects</button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="getContent('publications')">Publications</button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="getContent('courses')">Courses</button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="getContent('teaching')">Teaching</button>
-            </li>
-            <li class="nav-item">
-                <button type="button" class="btn nav-link" onclick="getContent('external')">External</button>
-            </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="container d-flex flex-wrap flex-row mt-4">
-        <div class="justify-content-center position-sticky d-none d-xl-block p-4" id="sidebar">
-          <img src="assets/zeynepabali_photo.jpg" class="img-thumbnail rounded-circle align-self-center" style="height: 10em; width: 10em;">
-          <h4 class="text-center pt-2">Zeynep Abalı</h4>
-          <p class="text-center">M.Sc. Data Science<br>Koç University</p>
-
-          <div class="m-2"><i class="fa-solid fa-location-dot fa-fw"></i>&nbspIstanbul/Turkey</div>
-          <div class="m-2"><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></div>
-          <div class="m-2"><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></div>
-          <div class="m-2"><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></div>
+    <!-- ═══════ Navigation ═══════ -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-brand"><span>ZA</span></a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#expertise">Expertise</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
+    </nav>
 
-        <div class="d-xl-none d-flex flex-nowrap position-sticky justify-content-center align-items-center" id="infobar">
-          <img src="assets/zeynepabali_photo.jpg" class="img-thumbnail rounded-circle" style="height: 4em;">
-          <h5 class="p-2">&nbspZeynep Abalı&nbsp</h5>
-
-          <div class="dropdown">
-              <button type="button" class="btn btn-outline-dark dropdown-toggle btn-block mb-1" data-bs-toggle="dropdown" aria-expanded="false">
-                Contact
-              </button>
-
-              <ul class="dropdown-menu p-2">
-                <li><a href="mailto:abali.zeynep@gmail.com" target="_blank"><i class="fa-regular fa-envelope fa-fw"></i>&nbspE-mail</a></li>
-                <li><a href="https://www.linkedin.com/in/abalizeynep/" target="_blank"><i class="fa-brands fa-linkedin-in fa-fw"></i>&nbspLinkedIn</a></li>
-                <li><a href="https://github.com/zeynepabali" target="_blank"><i class="fa-brands fa-github fa-fw"></i>&nbspGitHub</a></li>
-              </ul>
-          </div>
-        </div>
-
-        <div class="p-4" style="width: 908px;">
-            <div class="content" id="cv">
-            </div>
-            <div class="content" id="projects">
-            </div>
-            <div class="content" id="publications">
-            </div>
-            <div class="content" id="courses">
-            </div>
-            <div class="content" id="teaching">
-            </div>
-            <div class="content" id="external">
+    <!-- ═══════ Hero ═══════ -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge animate"><span class="dot"></span> Available for Consulting & Training</div>
+                <h1 class="animate delay-1">
+                    Zeynep Abalı<br>
+                    <span class="gradient">Data & ML Engineer</span>
+                </h1>
+                <p class="hero-subtitle animate delay-2">
+                    Freelance engineer building production-grade data pipelines and cloud-native infrastructure
+                    for companies across Europe and Turkey. Instructor at
+                    <strong>DataBeta Academy</strong> — teaching hands-on AI engineering bootcamps.
+                </p>
+                <div class="hero-cta animate delay-3">
+                    <a href="https://databeta.dev" class="btn btn-primary" target="_blank" rel="noopener">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                        DataBeta Academy
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- ═══════ Expertise ═══════ -->
+    <section id="expertise">
+        <div class="container">
+            <div class="section-header animate">
+                <div class="section-label">What I Do</div>
+                <h2 class="section-title">Core <span class="gradient">Expertise</span></h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-card data animate delay-1">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Data Engineering</h3>
+                    <p>Designing and managing end-to-end data pipelines from scratch — ingestion, transformation,
+                        storage, and orchestration for production workloads.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Apache Airflow</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Delta Lake</span>
+                        <span class="skill-tag">Amazon S3</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="skill-card infra animate delay-2">
+                    <div class="skill-icon">☸️</div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>Building and operating Kubernetes clusters from the ground up. Managing multi-cluster
+                        environments with GitOps workflows and infrastructure-as-code.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kubernetes</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">ArgoCD</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">CI/CD</span>
+
+                    </div>
+                </div>
+                <div class="skill-card ml animate delay-3">
+                    <div class="skill-icon">🧠</div>
+                    <h3>Machine Learning</h3>
+                    <p>Developing and deploying ML models — from classical approaches to deep learning. Experienced with
+                        the full lifecycle: research, training, evaluation, and serving.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">scikit-learn</span>
+                        <span class="skill-tag">MLflow</span>
+                        <span class="skill-tag">Hugging Face</span>
+                    </div>
+                </div>
+
+                <div class="skill-card ai animate delay-4">
+                    <div class="skill-icon">🚀</div>
+                    <h3>AI Engineering</h3>
+                    <p>Building production AI systems — RAG architectures, LLM integration, vector databases, and
+                        enterprise-grade deployments with privacy-first design.</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">LLMs / RAG</span>
+                        <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">Qdrant</span>
+                        <span class="skill-tag">Open WebUI</span>
+                        <span class="skill-tag">LangChain</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ Experience ═══════ -->
+    <section id="experience" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header animate">
+                <div class="section-label">Career</div>
+                <h2 class="section-title">Professional <span class="gradient">Experience</span></h2>
+            </div>
+            <div class="timeline">
+
+                <div class="timeline-item animate delay-2">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">DataBeta Academy</div>
+                    <div class="timeline-meta">2026 — Present</div>
+                    <div class="timeline-title">Co-Founder & Instructor</div>
+                    <div class="timeline-desc">
+                        Co-founded DataBeta Academy to deliver hands-on AI engineering bootcamps.
+                        Designing curriculum and teaching enterprise-grade AI deployment — from local LLMs and RAG
+                        systems to containerized microservice architectures.
+                    </div>
+                </div>
+
+                <div class="timeline-item animate delay-1">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">DataBeta</div>
+                    <div class="timeline-meta">2022 — Present</div>
+                    <div class="timeline-title">Data & ML Engineer</div>
+                    <div class="timeline-desc">
+                        Working with companies across Europe and Turkey. Building and managing data pipelines using
+                        Airflow, PostgreSQL, MongoDB, Delta Lake, and S3. Designing and operating Kubernetes clusters
+                        from scratch with Terraform, ArgoCD, and GitHub Actions — including multi-cluster production
+                        environments.
+                    </div>
+                </div>
+
+                <div class="timeline-item animate delay-4">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">inzva</div>
+                    <div class="timeline-meta">2022 — Present</div>
+                    <div class="timeline-title">AI Team Member & Guide</div>
+                    <div class="timeline-desc">
+                        Instructed participants on GPU-accelerated TensorFlow environments and convolutional neural
+                        network implementations for image classification tasks in Google ML Bootcamp.
+                    </div>
+                </div>
+
+                <div class="timeline-item animate delay-3">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-meta">Koç University</div>
+                    <div class="timeline-meta">2016 — Present</div>
+                    <div class="timeline-title">Research and Teaching Assistant</div>
+                    <div class="timeline-desc">
+                        Developed computational methods for protein-protein interaction analysis. Built data pipelines
+                        with SQL/NoSQL databases, implemented deep learning models in TensorFlow,
+                        and ran large-scale computations on HPC clusters.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ Teaching / Course ═══════ -->
+    <section id="teaching">
+        <div class="container">
+            <div class="section-header animate">
+                <div class="section-label">DataBeta Academy</div>
+                <h2 class="section-title">AI Engineering <span class="gradient">Bootcamp</span></h2>
+            </div>
+
+            <div class="course-card animate delay-1">
+                <div class="course-badge">
+                    <span class="dot"
+                        style="width:6px;height:6px;background:var(--golden-pollen);border-radius:50%;animation:pulse-dot 2s infinite;"></span>
+                    Upcoming · June 6–7, 2026
+                </div>
+                <h3>End-to-End AI Engineering: From Notebook to Production</h3>
+                <p class="subtitle">
+                    A 1.5-day intensive, hands-on bootcamp where participants build a fully local, enterprise RAG
+                    assistant from scratch — no data leaves the server. Max 20 participants.
+                </p>
+                <div class="course-meta">
+                    <div class="course-meta-item">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        7 Modules · 1.5 Days
+                    </div>
+                    <div class="course-meta-item">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <line x1="8" y1="21" x2="16" y2="21" />
+                            <line x1="12" y1="17" x2="12" y2="21" />
+                        </svg>
+                        Hands-On Lab
+                    </div>
+                    <div class="course-meta-item">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        Enterprise Grade
+                    </div>
+                    <div class="course-meta-item">
+                        <svg viewBox="0 0 24 24" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4-4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                        </svg>
+                        Max 20 Participants
+                    </div>
+                </div>
+                <div class="course-tech">
+                    <span class="course-tech-tag">Docker</span>
+                    <span class="course-tech-tag">Ollama</span>
+                    <span class="course-tech-tag">Qdrant</span>
+                    <span class="course-tech-tag">FastAPI</span>
+                    <span class="course-tech-tag">MLflow</span>
+                    <span class="course-tech-tag">Open WebUI</span>
+                    <span class="course-tech-tag">GitHub Actions</span>
+                </div>
+                <a href="https://databeta.dev" class="btn btn-primary" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+                        <polyline points="15 3 21 3 21 9" />
+                        <line x1="10" y1="14" x2="21" y2="3" />
+                    </svg>
+                    Learn More at databeta.dev
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ Education ═══════ -->
+    <section id="education" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header animate">
+                <div class="section-label">Background</div>
+                <h2 class="section-title">Education & <span class="gradient">Certifications</span></h2>
+            </div>
+
+            <div class="edu-grid" style="margin-bottom: 36px;">
+                <div class="edu-card animate delay-1">
+                    <div class="edu-degree">Ph.D. (Studies)</div>
+                    <h3>Computational Science & Engineering</h3>
+                    <div class="school">Koç University</div>
+                    <div class="detail">Deep learning for biological data and 3D protein structures.
+                    </div>
+                </div>
+                <div class="edu-card animate delay-2">
+                    <div class="edu-degree">M.Sc.</div>
+                    <h3>Data Science</h3>
+                    <div class="school">Koç University</div>
+                    <div class="detail">Thesis: A Data-Centric Approach for Investigation of Protein-Protein Interfaces
+                        in PDB.</div>
+                </div>
+                <div class="edu-card animate delay-3">
+                    <div class="edu-degree">B.Sc.</div>
+                    <h3>Biology</h3>
+                    <div class="school">Middle East Technical University (METU)</div>
+                    <div class="detail"></div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 16px; font-weight: 700; margin-bottom: 18px;" class="animate">Selected Certifications
+            </h3>
+            <div class="cert-grid">
+                <div class="cert-item animate delay-1">
+                    <h4>Databricks Certified Machine Learning Professional</h4>
+                    <div class="cert-org">Databricks</div>
+                </div>
+                <div class="cert-item animate delay-1">
+                    <h4>TensorFlow Developer Certificate</h4>
+                    <div class="cert-org">TensorFlow / Google</div>
+                </div>
+                <div class="cert-item animate delay-2">
+                    <h4>Machine Learning Bootcamp</h4>
+                    <div class="cert-org">inzva & Google Developers</div>
+                </div>
+                <div class="cert-item animate delay-3">
+                    <h4>Data Engineering, Big Data & ML on GCP</h4>
+                    <div class="cert-org">Coursera & Google Cloud</div>
+                </div>
+                <div class="cert-item animate delay-4">
+                    <h4>Big Data & Business Analytics</h4>
+                    <div class="cert-org">ITU & Mindset Institute</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ Teaching Assistant ═══════ -->
+    <section id="ta">
+        <div class="container">
+            <div class="section-header animate">
+                <div class="section-label">Koç University</div>
+                <h2 class="section-title">Teaching <span class="gradient">Experience</span></h2>
+            </div>
+
+            <div class="ta-grid">
+
+                <div class="ta-card animate delay-1">
+                    <div class="ta-code">COMP341</div>
+                    <h3>Introduction to Artificial Intelligence</h3>
+                    <div class="ta-terms">
+                        <span class="ta-term">Fall 2022</span>
+                        <span class="ta-term">Fall 2024</span>
+                        <span class="ta-term">Spring 2024</span>
+                    </div>
+                </div>
+
+                <div class="ta-card animate delay-2">
+                    <div class="ta-code">COMP125</div>
+                    <h3>Programming with Python</h3>
+                    <div class="ta-terms">
+                        <span class="ta-term">Fall 2023</span>
+                        <span class="ta-term">Spring 2023</span>
+                    </div>
+                </div>
+
+
+                <div class="ta-card animate delay-2">
+                    <div class="ta-code">ENGR201</div>
+                    <h3>Statistics for Engineers</h3>
+                    <div class="ta-terms">
+                        <span class="ta-term">Fall 2019</span>
+                        <span class="ta-term">Summer 2018</span>
+                        <span class="ta-term">Spring 2018</span>
+                        <span class="ta-term">Spring 2017</span>
+                        <span class="ta-term">Spring 2022</span>
+                    </div>
+                </div>
+
+                <div class="ta-card animate delay-1">
+                    <div class="ta-code">CHBI422/522</div>
+                    <h3>Computational Structural Biology</h3>
+                    <div class="ta-terms">
+                        <span class="ta-term">Spring 2021</span>
+                        <span class="ta-term">Spring 2020</span>
+                    </div>
+                </div>
+
+                <div class="ta-card animate delay-2">
+                    <div class="ta-code">CHBI406/506</div>
+                    <h3>Bioinformatics</h3>
+                    <div class="ta-terms">
+                        <span class="ta-term">Fall 2021</span>
+                        <span class="ta-term">Fall 2020</span>
+                    </div>
+                </div>
+
+                <div class="ta-card animate delay-3">
+                    <div class="ta-code">CMSE501</div>
+                    <h3>Intro to Computational Science &amp; Engineering</h3>
+                    <div class="ta-terms">
+                        <span class="ta-term">Fall 2017</span>
+                    </div>
+                </div>
+
+                <div class="ta-card animate delay-3">
+                    <div class="ta-code">MBGE200</div>
+                    <h3>Introductory Biology</h3>
+                    <div class="ta-terms">
+                        <span class="ta-term">Fall 2016</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ Publications ═══════ -->
+    <section id="publications">
+        <div class="container">
+            <div class="section-header animate">
+                <div class="section-label">Research</div>
+                <h2 class="section-title">Selected <span class="gradient">Publications</span></h2>
+            </div>
+            <div class="pub-list">
+                <a href="https://www.sciencedirect.com/science/article/pii/S0022283624002882" target="_blank"
+                    rel="noopener" class="pub-item animate delay-1">
+                    <h4>PPInterface: A Comprehensive Dataset of 3D Protein-Protein Interface Structures</h4>
+                    <div class="pub-venue">Journal of Molecular Biology, 2024</div>
+                </a>
+                <a href="https://academic.oup.com/bioinformatics/article-abstract/38/5/1455/6448208" target="_blank"
+                    rel="noopener" class="pub-item animate delay-1">
+                    <h4>SARS-CoV-2 Interactome 3D: A Web Interface for 3D Visualization and Analysis of SARS-CoV-2–Human
+                        Mimicry and Interactions</h4>
+                    <div class="pub-venue">Bioinformatics, Oxford Academic</div>
+                </a>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0959440X21001469" target="_blank"
+                    rel="noopener" class="pub-item animate delay-2">
+                    <h4>Artificial Intelligence Based Methods for Hot Spot Prediction</h4>
+                    <div class="pub-venue">Current Opinion in Structural Biology, Elsevier</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ Contact ═══════ -->
+    <section id="contact" style="background: var(--bg-surface);">
+        <div class="container">
+            <div class="section-header animate">
+                <div class="section-label">Connect</div>
+                <h2 class="section-title">Get in <span class="gradient">Touch</span></h2>
+            </div>
+            <div class="contact-grid animate delay-1">
+                <a href="mailto:zeynep.abali@databeta.dev" class="contact-link">
+                    <svg viewBox="0 0 24 24" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                        <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    E-mail
+                </a>
+                <a href="https://www.linkedin.com/in/abalizeynep/" target="_blank" rel="noopener" class="contact-link">
+                    <svg viewBox="0 0 24 24" stroke-width="2">
+                        <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/zeynepabali" target="_blank" rel="noopener" class="contact-link">
+                    <svg viewBox="0 0 24 24" stroke-width="2">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
+                    </svg>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════ Footer ═══════ -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Zeynep Abalı · Built with care</p>
+        </div>
+    </footer>
 
     <script>
-        function getContent(filePath) {
-            fetch('https://raw.githubusercontent.com/zeynepabali/zeynepabali.github.io/master/' + filePath + '.html')
-            .then((response) => response.text())
-            .then((text) => {
-            $("#" + filePath).html(text);
-            })
+        // Mobile menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+        hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
 
-            $(".content").hide();
-            $("#" + filePath).show();
+        // Close mobile menu on link click
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => navLinks.classList.remove('open'));
+        });
 
-            window.location.href = "#" + filePath;
-        };
+        // Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-        $( document ).ready(function() {
-            if (window.location.hash.length) {
-                getContent(window.location.hash.substring(1))
-            } else {
-                getContent('cv')
-            }
+        document.querySelectorAll('.animate').forEach(el => {
+            el.style.animationPlayState = 'paused';
+            observer.observe(el);
         });
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  </body>
+
+</body>
+
 </html>
